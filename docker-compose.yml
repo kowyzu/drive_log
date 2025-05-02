@@ -1,0 +1,8 @@
+services:
+  web:
+    container_name: drive_log_php
+    image: php:8.3-apache
+    ports:
+      - "3000:80"
+    volumes:
+      - .:/var/www/html

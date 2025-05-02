@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700');
+
+//
+// VARIABLES
+// ----------------------------------------------------
+$primary:#03A791;
+$primary-transparent:#a40c236a;
+$primary-line:#a40c23a0;
+$secondary:#81E7AF;
+$secondary-transparent:#dedede8e;
+$tertiary:#9c9898;
+$white: white;
+$color-error: #dc3545;
+
+$font-size-primary: 1.2rem;
+$font-size-smaller: 1rem;
+$font-size-error: 0.875rem;
+
+$font-family-sans: "Montserrat", sans-serif;
+$font-family-serif: "Roboto Slab","Big Caslon", Georgia, serif;
+
+$color-text: #343a40;
+
+$color-bg-primary: #E9F5BE;
+$color-bg-secondary: #F1BA88;
+$color-bg-gradient: linear-gradient(
+    to bottom, 
+    rgba(217, 217, 217, 1) 0%, 
+    rgba(217, 217, 217, 1) 21%, 
+    rgba(227, 227, 227, 1) 40%, 
+    rgba(254, 254, 254, 1) 94%, 
+    rgba(254, 254, 254, 1) 100%
+);
+$color-bg-gradient-ligher: linear-gradient(
+  to bottom, 
+  rgba(235, 232, 232, 1) 0%, 
+  rgba(235, 232, 232, 1) 10%, 
+  rgba(235, 232, 232, 1) 30%, 
+  rgba(235, 232, 232, 0.187) 74%, 
+  rgba(235, 232, 232, 0.187) 60%
+);
+
+$box-shadow-primary:0 2px 1px rgba(0, 0, 0, 0.05),
+                    0 2px 3px rgba(0, 0, 0, 0.05),
+                    0 4px 8px rgba(0, 0, 0, 0.05);
+$box-shadow-right: 12px 9px 10px 0px rgba(0,0,0,0.3);
+$box-shadow-left:  -1px 6px 8px 0px rgba(0,0,0,0.3);
+
+$btn-box-shadow: 3px 4px 14px -3px rgba(0, 0, 0, 0.75);
+
+$border-radius-primary: 10px;
+$border-radius-secondary: 5px;
+
+$scroll-margin-bigger: 19.508rem;
+$scroll-margin-smaller: 5.509rem;
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+//
+// GENERAL
+// ----------------------------------------------------
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: $color-text;
+  background: $color-bg-primary;
+  background-attachment: fixed;
+
+  font: {
+      family: $font-family-sans;
+      weight: normal;
+      size: $font-size-primary;
+  }
+}
+
+h1, h2, h3 {
+  font: {
+      family: $font-family-serif;
+      // weight: bolder;
+  }
+}
+
+h5 {
+font-size: $font-size-primary;
+}
+
+.nav-link{
+font-size: $font-size-primary;
+}
+
+.img-logo{
+  width: 164px;
+}
+
+a:hover {
+  color: $primary !important;
+}
+
+strong {
+color: $primary;
+font-weight: bolder;
+}
+
+.nav-link {
+transition: color 0.2s ease;
+transition: border-color 0.2s ease;
+}
