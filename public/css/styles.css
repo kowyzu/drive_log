@@ -11895,4 +11895,19 @@ strong {
   transition: border-color 0.2s ease;
 }
 
+.drive-log-form-control {
+  background-color: rgba(243, 212, 183, 0.3725490196);
+  border-color: rgba(3, 167, 145, 0.5333333333);
+}
+
+.drive-log-form-control:focus {
+  background-color: rgba(243, 212, 183, 0.3725490196);
+  border-color: rgba(3, 167, 145, 0.5333333333);
+}
+
+.drive-log-form-span {
+  background-color: #F1BA88;
+  border-color: rgba(3, 167, 145, 0.5333333333);
+}
+
 /*# sourceMappingURL=styles.css.map */

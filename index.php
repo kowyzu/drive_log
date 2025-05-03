@@ -1,42 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DriveLog</title>
-  <link rel="stylesheet" href="public/css/styles.css">
+include_once './src/_partials/header.php';
 
-</head>
+
+if (!empty($_POST) && $_POST['kmsDriven'] !== '') {
+
+  $file = 'src/loggers/storage';
+  make_file($file);
+
+  $data = [];
+
+  $post = (object) [
+    'text' => $_POST['kmsDriven'],
+    'time' => time()
+  ];
+
+  array_push($data, $post);
+
+
+  file_put_contents($file, json_encode($data));
+}
+
+
+?>
+
+
 
 <body>
-  <div class="container p-5">
-    <div class="container text-center">
-      <div class="row">
-        <h1>Zapis svou jizdu</h1>
-      </div>
-      <div class="row">
-        <div class="col">
-          <div class="card" style="width: 18rem;">
-
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
+  <div class="container p-5 text-center">
+    <div class="row justify-content-center">
+      <h1>Log your drive <i class="fa-solid fa-heart ps-3" style="color: #a294f9;"></i></h1>
+    </div>
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-6">
+        <form id="log-form" class="drive-log-form" action="" method="post">
+          <div class="input-group drive-log-form-input-group">
+            <span class="input-group-text drive-log-form-span" id="addon-wrapping">km</span>
+            <input type="text" class="form-control drive-log-form-control" name="kmsDriven"
+              placeholder="Distance driven " aria-label="Kms drived" aria-describedby="addon-wrapping">
           </div>
-        </div>
-        <div class="col">
-          Column
-        </div>
-        <div class="col">
-          Column
-        </div>
+          <button type="submit" class="btn btn-primary mt-5" name="submitted" value="kms driven submitted">Save</button>
+        </form>
       </div>
     </div>
   </div>
-
 </body>
 
-</html>
+<?php include_once 'src/_partials/footer.php' ?>

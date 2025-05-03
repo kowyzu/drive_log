@@ -5,13 +5,14 @@
 // VARIABLES
 // ----------------------------------------------------
 $primary:#03A791;
-$primary-transparent:#a40c236a;
+$primary-transparent:#03a79188;
 $primary-line:#a40c23a0;
 $secondary:#81E7AF;
 $secondary-transparent:#dedede8e;
 $tertiary:#9c9898;
 $white: white;
 $color-error: #dc3545;
+$color-details: #A294F9;
 
 $font-size-primary: 1.2rem;
 $font-size-smaller: 1rem;
@@ -24,6 +25,7 @@ $color-text: #343a40;
 
 $color-bg-primary: #E9F5BE;
 $color-bg-secondary: #F1BA88;
+$color-bg-tertiary: #f3d4b75f;
 $color-bg-gradient: linear-gradient(
     to bottom, 
     rgba(217, 217, 217, 1) 0%, 
@@ -108,3 +110,23 @@ font-weight: bolder;
 transition: color 0.2s ease;
 transition: border-color 0.2s ease;
 }
+
+//
+//DRIVE LOG FORM
+////////////////
+
+.drive-log-form-control {
+  background-color: $color-bg-tertiary;
+  border-color: $primary-transparent;
+}
+
+.drive-log-form-control:focus {
+  background-color: $color-bg-tertiary;
+  border-color: $primary-transparent;
+}
+
+.drive-log-form-span {
+  background-color: $color-bg-secondary;
+  border-color: $primary-transparent;
+}
+
