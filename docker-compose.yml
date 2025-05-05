@@ -1,8 +1,32 @@
 services:
   web:
     container_name: drive_log_php
-    image: php:8.3-apache
+    build: .
     ports:
       - "3000:80"
     volumes:
       - .:/var/www/html
+    depends_on:
+      - db
+  
+  db:
+    container_name: drive_log_db
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql
+
+  adminer:
+    container_name: drive_log_adminer
+    image: adminer
+    restart: always
+    ports:
+      - "8081:8080"
+
+volumes:
+  db_data:

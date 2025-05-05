@@ -4,15 +4,15 @@
 //
 // VARIABLES
 // ----------------------------------------------------
-$primary:#03A791;
-$primary-transparent:#03a79188;
+$primary:#641B2E;
+$primary-transparent:#641b2e61;
 $primary-line:#a40c23a0;
-$secondary:#81E7AF;
+$secondary:#8A2D3B;
 $secondary-transparent:#dedede8e;
 $tertiary:#9c9898;
 $white: white;
 $color-error: #dc3545;
-$color-details: #A294F9;
+// $color-details: #A294F9;
 
 $font-size-primary: 1.2rem;
 $font-size-smaller: 1rem;
@@ -23,8 +23,8 @@ $font-family-serif: "Roboto Slab","Big Caslon", Georgia, serif;
 
 $color-text: #343a40;
 
-$color-bg-primary: #E9F5BE;
-$color-bg-secondary: #F1BA88;
+$color-bg-primary: #FBDB93;
+$color-bg-secondary: #BE5B50;
 $color-bg-tertiary: #f3d4b75f;
 $color-bg-gradient: linear-gradient(
     to bottom, 
@@ -111,6 +111,10 @@ transition: color 0.2s ease;
 transition: border-color 0.2s ease;
 }
 
+i {
+  color: $primary;
+}
+
 //
 //DRIVE LOG FORM
 ////////////////
@@ -130,3 +134,10 @@ transition: border-color 0.2s ease;
   border-color: $primary-transparent;
 }
 
+//
+//DRIVE LOG LIST
+////////////////
+
+// .drive-log-list {
+//   background-color: $color-bg-secondary;
+// }
