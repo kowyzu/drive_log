@@ -1,13 +1,9 @@
-<?php require_once 'src/_inc/config.php' ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DriveLog</title>
-  <link rel="icon" type="image/x-icon" href="src/imgs/favicon.ico" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="public/css/styles.css">
-
-</head>
+<header class="text-center">
+  <div class="row justify-content-center">
+    <div class="col mt-lg-5"><img class="img-fluid" width=400px src="src/imgs/car_summer.png"
+        alt="Red car driving into a warm sunset on an open road, viewed from behind."></div>
+  </div>
+  <div class="row justify-content-center mt-5">
+    <h1>Log your drive <i class="fa-solid fa-heart ps-3"></i></h1>
+  </div>
+</header>

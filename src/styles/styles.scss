@@ -138,6 +138,7 @@ i {
 //DRIVE LOG LIST
 ////////////////
 
-// .drive-log-list {
-//   background-color: $color-bg-secondary;
-// }
+.drive-log-list-group-item {
+  background-color: $color-bg-primary;
+  border-color: $primary-transparent;
+}
