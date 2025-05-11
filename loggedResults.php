@@ -1,3 +1,11 @@
+<?php
+include_once './src/_partials/head.php';
+
+
+
+print_r($post);
+?>
+
 <div class="row">
   <div class="col">
     <ul class='list-group drive-log-list'><?php

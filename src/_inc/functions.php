@@ -1,9 +1,43 @@
 <?php
-function make_file($filename)
+
+function clean($input): string
 {
-  if (is_file($filename)) {
-    return false;
-  }
-  fclose(fopen($filename, 'x'));
-  return true;
+  $input = trim($input);
+  $input = strip_tags($input);
+
+  return $input;
 }
+;
+
+function validatePost($post): bool
+{
+  if (is_numeric($post['km']) && is_numeric($post['price'])) {
+    return true;
+  }
+  return false;
+}
+;
+
+
+function postToDB($post)
+{
+  global $db;
+
+  try {
+    $stmt = $db->prepare("INSERT INTO kms_drive (km, dateFrom, dateTo, carType, price, note, timestamp)
+                          VALUES (:km, :dateFrom, :dateTo, :carType, :price, :note, :timestamp)");
+
+    $stmt->execute([
+      ':km' => $post['km'],
+      ':dateFrom' => $post['dateFrom'],
+      ':dateTo' => $post['dateTo'],
+      ':carType' => $post['carType'],
+      ':price' => $post['price'],
+      ':note' => $post['note'],
+      ':timestamp' => $post['timestamp']
+    ]);
+  } catch (PDOException $e) {
+    echo "<div class='invalid mt-3'>Database error: " . $e->getMessage() . "</div>";
+  }
+}
+

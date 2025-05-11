@@ -12,6 +12,7 @@ $secondary-transparent:#dedede8e;
 $tertiary:#9c9898;
 $white: white;
 $color-error: #dc3545;
+$color-success: #03A791;
 // $color-details: #A294F9;
 
 $font-size-primary: 1.2rem;
@@ -115,6 +116,15 @@ i {
   color: $primary;
 }
 
+.btn {
+  color: $color-bg-primary;
+}
+
+.btn:hover {
+  color: $color-bg-secondary;
+}
+
+
 //
 //DRIVE LOG FORM
 ////////////////
@@ -129,9 +139,25 @@ i {
   border-color: $primary-transparent;
 }
 
+.drive-log-form-select {
+  background-color: $color-bg-tertiary;
+  border-color: $primary-transparent;
+  color: $color-text;
+}
+
 .drive-log-form-span {
   background-color: $color-bg-secondary;
   border-color: $primary-transparent;
+}
+
+//FORM VALIDATION
+
+.valid {
+  color: $color-success;
+}
+
+.invalid {
+  color: $color-error;
 }
 
 //

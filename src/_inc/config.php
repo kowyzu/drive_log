@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Europe/Prague');
 
 // global functions
 require_once 'src/_inc/functions.php';
@@ -15,13 +16,9 @@ $db = new PDO(sprintf('mysql:host=%s;dbname=%s', $host, $db_name), $user, $passw
 try {
   $query = $db->query('SELECT * FROM kms_drive');
 } catch (PDOException $e) {
-  echo '<pre>';
-  print_r($e);
-  echo '</pre>';
+
 }
 
 $data = $query->fetchAll(PDO::FETCH_OBJ);
 
-echo '<pre>';
-print_r($data);
-echo '</pre>';
+
