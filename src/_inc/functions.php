@@ -41,3 +41,26 @@ function postToDB($post)
   }
 }
 
+//Get sum of kms
+function sumKms()
+{
+  global $db;
+
+  try {
+    $query = $db->query('SELECT SUM(km) FROM kms_drive');
+
+    $SumOfKms = $query->fetchAll(PDO::FETCH_ASSOC);
+
+
+    return $SumOfKms[0]['SUM(km)'];
+  } catch (PDOException $e) {
+    echo "<div class='invalid mt-3'>Database error: " . $e->getMessage() . "</div>";
+  }
+}
+
+//Format sum
+function formatKms()
+{
+
+}
+;

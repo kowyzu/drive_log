@@ -9,6 +9,13 @@ include_once './src/_partials/head.php';
     <?php include_once 'src/_partials/header.php' ?>
     <main>
       <?php include_once 'form.php' ?>
+      <div class="sum-of-kms">
+        <p>
+          <?php
+          echo (clean(sumKms()));
+          ?>
+        </p>
+      </div>
     </main>
   </div>
 </body>
