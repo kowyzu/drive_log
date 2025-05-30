@@ -9,13 +9,16 @@ include_once './src/_partials/head.php';
     <?php include_once 'src/_partials/header.php' ?>
     <main>
       <?php include_once 'form.php' ?>
-      <div class="sum-of-kms">
+      <div class="sum-of-kms mt-5">
+        <h2>You have already drove:</h2>
         <p>
           <?php
           echo (clean(sumKms()));
           ?>
+          km
         </p>
       </div>
+      <button class="btn btn-primary">Display all logs <?php echo clean('44.5'); ?></button>
     </main>
   </div>
 </body>

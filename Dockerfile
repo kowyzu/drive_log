@@ -1,4 +1,6 @@
 FROM php:8.3-apache
 
-# Install MySQL PDO extension
+
+COPY --from=composer/composer:latest-bin /composer /usr/bin/composer
+
 RUN docker-php-ext-install pdo pdo_mysql

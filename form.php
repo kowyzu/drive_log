@@ -77,7 +77,7 @@ if ($_POST !== [] && $_POST['kmsDriven'] !== '' && $_POST['dateFrom'] !== '' && 
   }
 
   $post = [
-    'km' => clean($_POST['kmsDriven']),
+    'km' => clean(convertNumber($_POST['kmsDriven'])),
     'dateFrom' => clean($_POST['dateFrom']),
     'dateTo' => $dateTo,
     'carType' => clean($_POST['carType']),

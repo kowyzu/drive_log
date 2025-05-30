@@ -18,6 +18,12 @@ function validatePost($post): bool
 }
 ;
 
+function convertNumber($number)
+{
+  $number = str_replace(',', '.', $number);
+  return $number;
+}
+
 
 function postToDB($post)
 {
@@ -58,9 +64,8 @@ function sumKms()
   }
 }
 
-//Format sum
+//Format sum => TODO
 function formatKms()
 {
 
 }
-;

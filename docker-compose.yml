@@ -3,7 +3,7 @@ services:
     container_name: drive_log_php
     build: .
     ports:
-      - "3000:80"
+      - "3001:80"
     volumes:
       - .:/var/www/html
     depends_on:
