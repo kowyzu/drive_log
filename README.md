@@ -9,4 +9,3 @@ I'm using this project to learn the basics of PHP and backend development. I'm w
 - MySQL
 - HTML/SCSS
 
-Still a work in progress!
