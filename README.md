@@ -7,6 +7,6 @@ I'm using this project to learn the basics of PHP and backend development. I'm w
 ## Tech stack
 - PHP
 - MySQL
-- HTML/CSS
+- HTML/SCSS
 
 Still a work in progress!
